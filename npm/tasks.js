@@ -5,7 +5,7 @@ module.exports = {
     test            : 'jest --coverage',
     flow            : 'flow',
     lint            : 'npm run lint:js && npm run lint:css',
-    start           : 'npm run start:main & run npm start:renderer',
+    start           : 'npm run start:main & npm run start:renderer',
     build           : 'NODE_ENV=production npm run build:main && NODE_ENV=production npm run build:render',
     changelog       : 'conventional-changelog -p angular -i CHANGELOG.md -s -r 0',
     'lint:js'       : 'eslint .',
