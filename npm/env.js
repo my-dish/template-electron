@@ -5,10 +5,11 @@ module.exports = {
     moduleNameMapper: {
       '^.+\\.(css)$': 'identity-obj-proxy'
     },
-    moduleFileExtensions: ['js']
+    moduleFileExtensions: ['js'],
+    snapshotSerializers : ['./node_modules/jest-serializer-enzyme']
   },
   build: {
-    appId: 'com.electron.hoge',
+    appId: 'com.electron.foo',
     files: [
       'dist',
       'index.html',
