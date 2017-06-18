@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
 import Main from '../../../../src/renderer/components/tempaltes/Main';
 
 describe('Main component', () => {
@@ -9,7 +8,7 @@ describe('Main component', () => {
   it('should render self and subcomponents', () => {
     const wrapper = createDOM();
 
-    expect(toJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should render left, right and children', () => {
@@ -19,6 +18,6 @@ describe('Main component', () => {
       children: <div>children</div>
     });
 
-    expect(toJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });

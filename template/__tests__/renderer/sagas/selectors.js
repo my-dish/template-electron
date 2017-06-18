@@ -9,4 +9,3 @@ describe('selectors', () => {
     expect(selectors.getMail(storeState)).toEqual('');
   });
 });
-

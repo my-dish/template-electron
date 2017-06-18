@@ -24,14 +24,14 @@ function *routeError(action: Error): Generator<Effect, void, *> {
 }
 
 /**
- * invalid mail address when logging in
+ * login error
  */
 function errorLogin() {
   alert('invalid mail address');
 }
 
 /**
- * already exists the video in this mylist
+ * logout error
  */
 function errorLogout() {
   alert('cannot logout');

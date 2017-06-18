@@ -16,7 +16,6 @@ const localIdentName = process.env.NODE_ENV !== 'production' ?
 const common = {
   bail  : true,
   target: 'electron-renderer',
-  entry : path.join(__dirname, 'src', 'renderer', 'index.js'),
   output: {
     path      : path.resolve(__dirname, 'dist'),
     filename  : 'bundle.js',

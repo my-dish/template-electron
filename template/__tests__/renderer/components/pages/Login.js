@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
 import Login from '../../../../src/renderer/components/pages/Login';
 
 describe('Login component', () => {
@@ -9,13 +8,13 @@ describe('Login component', () => {
   it('should render self and subcomponents', () => {
     const wrapper = createDOM();
 
-    expect(toJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should render props', () => {
     const wrapper = createDOM({ mail: '--mail' });
 
-    expect(toJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should ', () => {

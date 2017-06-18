@@ -6,11 +6,14 @@ const Dashboard               = require('webpack-dashboard');
 const DashboardPlugin         = require('webpack-dashboard/plugin');
 const FlowStatusWebpackPlugin = require('flow-status-webpack-plugin');
 
+require('babel-polyfill');
+
 const dashboard = new Dashboard();
 
 module.exports = {
   cache: true,
   entry: [
+    'babel-polyfill',
     'react-hot-loader/patch',
     path.join(__dirname, 'src', 'renderer', 'index.js')
   ],
