@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router';
 import configureStore from 'redux-mock-store';
 import { render } from 'enzyme';
-import Routes from '../../src/renderer/routes';
+import Routes from '../../src/renderer/Routes';
 import rootReducer from '../../src/renderer/reducers';
 
 describe('routes', () => {
@@ -21,12 +21,11 @@ describe('routes', () => {
     );
   };
 
-  it('should render the root page', () => {
-    expect(createDOM()).toMatchSnapshot();
-  });
-
-
   it('should render the login page', () => {
     expect(createDOM('/login')).toMatchSnapshot();
+  });
+
+  it('should render the none page', () => {
+    expect(createDOM('/none')).toMatchSnapshot();
   });
 });

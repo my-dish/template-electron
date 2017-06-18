@@ -8,8 +8,8 @@ import Login from './containers/Login';
 const Router = () => (
   <App>
     <Switch>
-      <Route path="/login" component={Login} />
-      <Route><div>hello!</div></Route> {/* root */}
+      <Route path="/none"><div>hello!</div></Route> {/* root */}
+      <Route component={Login} />
     </Switch>
   </App>
 );
