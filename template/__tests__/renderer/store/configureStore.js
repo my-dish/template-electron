@@ -2,10 +2,7 @@ describe('root store', () => {
   afterEach(() => {
 
     // reset NODE_ENV
-    process.env.NODE_ENV = 'test';
-
-    // reset cache
-    // jest.resetModules();
+    process.env.NODE_ENV = 'development';
   });
 
   it('should get configureStore and history in NODE_ENV=development', () => {
@@ -42,19 +39,19 @@ describe('root store', () => {
     }));
   });
 
-  // it('should return different results', () => {
-  //   process.env.NODE_ENV = 'development';
-  //   const dev = require('../../../src/renderer/store/configureStore');
-  //
-  //   // reset cache
-  //   jest.resetModules();
-  //
-  //   process.env.NODE_ENV = 'production';
-  //   const prod = require('../../../src/renderer/store/configureStore');
-  //
-  //   // location's key is different...
-  //   // histories are the same except location's key
-  //   expect(dev.history.action).toEqual(prod.history.action);
-  //   expect(prod.default()).not.toEqual(dev.default());
-  // });
+  it('should return different results', () => {
+    process.env.NODE_ENV = 'development';
+    const dev = require('../../../src/renderer/store/configureStore');
+
+    // reset cache
+    jest.resetModules();
+
+    process.env.NODE_ENV = 'production';
+    const prod = require('../../../src/renderer/store/configureStore');
+
+    // location's key is different...
+    // histories are the same except location's key
+    expect(dev.history.action).toEqual(prod.history.action);
+    expect(prod.default()).not.toEqual(dev.default());
+  });
 });
