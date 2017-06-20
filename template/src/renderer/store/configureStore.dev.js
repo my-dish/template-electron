@@ -19,7 +19,7 @@ const createEnhancer = () => {
       window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
         actionsBlacklist: []
       }) :
-    compose;
+      compose;
 
   const appliedMiddlewares = applyMiddleware(
     saga,

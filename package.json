@@ -30,7 +30,7 @@
     "@my-dish/packer": "^0.2.4",
     "ava": "^0.19.1",
     "eslint": "^3.19.0",
-    "eslint-config-sky": "^1.6.0",
+    "eslint-config-sky": "^1.6.2",
     "nyc": "^11.0.2"
   }
 }
